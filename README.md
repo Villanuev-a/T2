@@ -12,15 +12,18 @@ somente as opções 1 e 5 será necessário inserir um nome
 as demais utilizam o nome do arquivo  
 ____________________________
 # As opções são:  
-1 - Inserir na impressão  
-2 - Imprimir  
-3 - Mostrar na fila de impressão  
-4 - Mostrar posição na solicitação de impressão  
-5 - inserir na impressão emergencial  
-6 - imprimir na impressão emergencial  
-7 - posição na impressão emergencial  
-8 - prioridade emergencial  
-0 - Sair  
+| Opção | Descrição |
+|-------|--------------------------------------|
+| 1     | Inserir na impressão                |
+| 2     | Imprimir                            |
+| 3     | Mostrar na fila de impressão        |
+| 4     | Mostrar posição na solicitação de impressão |
+| 5     | Inserir na impressão emergencial    |
+| 6     | Imprimir na impressão emergencial   |
+| 7     | Posição na impressão emergencial    |
+| 8     | Prioridade emergencial              |
+| 0     | Sair                                |
+
 _________________________________________________________
 # para usar:  
 de o pull dos arquivos e adicione eles em uma unica pasta.  
