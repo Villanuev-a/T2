@@ -1,4 +1,23 @@
-# T2
+# T2 - Simulação de uma impressora 
+_________________________________________________________
+# Como funciona
+Uma impressora recebe dados de: nome de documento, nome do solicitador da impressora, e horário de solicitação.  
+Essa impressora tem os modos de impressão normal e a impressão emergial.  
+A impressão normal recebe os dados e coloca o arquivo em uma fila. A fila funciona: o primeiro a entrar é o primeiro a sair  
+A impressão emergencial recebe os dados e coloca o arquivo em uma pilha.A pilha funciona: último a entrar é o primeiro a sair  
+____________________________
+# As opções são:  
+1 - Inserir na impressão  
+2 - Imprimir  
+3 - Mostrar na fila de impressão  
+4 - Mostrar posição na solicitação de impressão  
+5 - inserir na impressão emergencial  
+6 - imprimir na impressão emergencial  
+7 - posição na impressão emergencial  
+8 - prioridade emergencial  
+0 - Sair  
+_________________________________________________________
+# para usar:  
 de o pull dos arquivos e adicione eles em uma unica pasta.  
 Se for melhor, baixe os arquivos, crie uma pasta e adicione todas as dependencias nele.  
 O arquivo "teste.txt" é um teste, use ele para testa-lo.  
