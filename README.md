@@ -6,10 +6,10 @@ Essa impressora tem os modos de impressão normal e a impressão emergial.
 A impressão normal recebe os dados e coloca o arquivo em uma fila. A fila funciona: o primeiro a entrar é o primeiro a sair  
 A impressão emergencial recebe os dados e coloca o arquivo em uma pilha.A pilha funciona: último a entrar é o primeiro a sair  
 # Guia  
-digite primeiro a opção que deseja  
-após isso digite um nome de arquivo e um nome  
-somente as opções 1 e 5 será necessário inserir um nome  
-as demais utilizam o nome do arquivo  
+1️⃣digite primeiro a opção que deseja  
+2️⃣após isso digite um nome de arquivo e um nome  
+3️⃣somente as opções 1 e 5 será necessário inserir um nome do arquivo e o nome do solicitador  
+4️⃣as demais utilizam o nome do arquivo  
 ____________________________
 # As opções são:  
 | Opção | Descrição |
