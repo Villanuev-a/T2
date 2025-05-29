@@ -42,7 +42,7 @@ public class Pilha{
         }
         for (int i = 0; i < dados.length; i++) {
             if (dados[i] != null && dados[i].getNomeArquivo().equals(documento)) {
-                return i + 1;
+                return dados.length - i;
         }
     }
     return -1;

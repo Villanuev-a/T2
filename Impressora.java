@@ -11,8 +11,7 @@ public class Impressora {
         int opcao;
 
         do {
-            System.out.println(
-                    "\n1 - Enfileirar Documento\n2 - Imprimir\n3 - Mostrar Fila\n4 - Mostrar posição\n5 - inserir na impressão emergencial\n6 - imprimir na fila emergencial\n7 - posição na impressão emergencial\n0 - Sair");
+            System.out.println("\n1 - Inserir na impressão\n2 - Imprimir\n3 - Mostrar na fila de impressão\n4 - Mostrar posição na solicitação de impressão\n5 - inserir na impressão emergencial\n6 - imprimir na impressão emergencial\n7 - posição na impressão emergencial\n8 - prioridade emergencial\n0 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -63,7 +62,7 @@ public class Impressora {
                     if (posicao == -1) {
                         System.out.println("Documento não está na fila de impressão");
                     } else {
-                        System.out.println(posicao);
+                        System.out.println("posição"+ posicao);
                     }
                     break;
                 }
@@ -96,7 +95,6 @@ public class Impressora {
                         DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm");
                         System.out.println("Documento impresso: " + pilha.pop());
                         System.out.println("impresso às :" + dataHora.format(formato));
-                        System.out.println(pilha);
                     } else {
                         System.out.println("A pilha está vazia!");
                     }
@@ -111,6 +109,10 @@ public class Impressora {
                     } else {
                         System.out.println(posicao);
                     }
+                    break;
+                }
+                case 8:{
+                    System.out.println(pilha);
                     break;
                 }
                 case 0:
