@@ -1,7 +1,7 @@
 # T2 - Simulação de uma impressora 
 _________________________________________________________
 # Como funciona
-Uma impressora recebe dados de: nome de documento, nome do solicitador da impressora, e horário de solicitação.  
+Uma impressora recebe dados de: nome de documento, nome do usuário da impressora, e horário de solicitação.  
 Essa impressora tem os modos de impressão normal e a impressão emergial.  
 A impressão normal recebe os dados e coloca o arquivo em uma fila. A fila funciona: o primeiro a entrar é o primeiro a sair  
 A impressão emergencial recebe os dados e coloca o arquivo em uma pilha.A pilha funciona: último a entrar é o primeiro a sair  
