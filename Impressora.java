@@ -7,18 +7,25 @@ public class Impressora {
         Scanner scanner = new Scanner(System.in);
         Fila fila = new Fila(5);
         Pilha pilha = new Pilha();
-        int opcao;
+        int opcao = -1 ;
 
         do {
             System.out.println("\n1 - Inserir na impressão\n2 - Imprimir\n3 - Mostrar na fila de impressão\n4 - Mostrar posição na solicitação de impressão\n5 - inserir na impressão emergencial\n6 - imprimir na impressão emergencial\n7 - posição na impressão emergencial\n8 - prioridade emergencial\n0 - Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
-            if(opcao < 0 || opcao > 8 ){
-                System.out.println("opção invalida, digite novamente");
-                System.out.print("Escolha uma opção: ");
-                opcao = scanner.nextInt();
+            String entrada = scanner.nextLine(); 
+
+            try {
+                opcao = Integer.parseInt(entrada);
+            } catch (NumberFormatException e) {
+                System.out.println("Entrada inválida! Digite um número.");
+                opcao = -1; 
             }
-            scanner.nextLine();
+
+            if (opcao < 0 || opcao > 8) {
+                System.out.println("Opção inválida!");
+                opcao = -1; 
+            }
+
 
             switch (opcao) {
                 case 1:{
@@ -49,7 +56,6 @@ public class Impressora {
                         DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm");
                         System.out.println("Documento impresso: " + fila.desenfileira());
                         System.out.println("impresso às :" + dataHora.format(formato));
-                        System.out.println(fila);
                     } else {
                         System.out.println("A fila está vazia!");
                     }
@@ -63,14 +69,14 @@ public class Impressora {
                     System.out.print("Digite o nome do arquivo: ");
                     String nomeArquivo = scanner.nextLine();
                     if(fila.filaVazia()){
-                        System.out.println("este documento não esta inserido na impressão");
+                        System.out.println("este documento não esta na impressão");
                     }
                     else{
                     int posicao = fila.mostrarPosicao(nomeArquivo);
                     if (posicao == -1) {
                         System.out.println("Documento não está na fila de impressão");
                     } else {
-                        System.out.println("posição"+ posicao);
+                        System.out.println("posição: "+ posicao);
                     }
                 }
                     break;
@@ -112,12 +118,17 @@ public class Impressora {
                 case 7:{
                     System.out.print("Digite o nome do arquivo: ");
                     String nomeArquivo = scanner.nextLine();
+                    if(pilha.pilhaVazia()){
+                        System.out.println("Documento não esta na pilha de impressão");
+                    }
+                    else{
                     int posicao = pilha.mostrarPosicao(nomeArquivo);
                     if (posicao == -1) {
                         System.out.println("Documento não está na pilha de impressão");
                     } else {
-                        System.out.println(posicao);
+                        System.out.println("posição na impressão emergencial: "+ posicao);
                     }
+                }
                     break;
                 }
                 case 8:{
@@ -131,6 +142,7 @@ public class Impressora {
 
                 default:
                     System.out.println("Opção inválida, tente novamente.");
+                    break;
             }
         } while(opcao != 0);
     }

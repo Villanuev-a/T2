@@ -40,9 +40,9 @@ public class Pilha{
         if (pilhaVazia()){
             throw new RuntimeException("pilha vazia");
         }
-        for (int i = 0; i < dados.length; i++) {
+        for (int i = topo; i >= 0; i--) {
             if (dados[i] != null && dados[i].getNomeArquivo().equals(documento)) {
-                return dados.length - i;
+                return topo - i;
         }
     }
     return -1;
@@ -50,7 +50,7 @@ public class Pilha{
 
     @Override
     public String toString(){
-        if(pilhaVazia()) return "fila vazia";
+        if(pilhaVazia()) return "pilha vazia";
         String s = " ";
         for(int i = topo -1; i>=0; i--)
         {
